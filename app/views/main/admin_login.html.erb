@@ -1,0 +1,46 @@
+<% if @error != nil %>
+  <b>Error: <%= @error %></b>
+<% end %>
+
+<div class='login-title'
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <h1>Login for Aministration Duties</h1>
+        <h3>Restricted Access</h3>
+     </div>
+    </div>
+  </div>
+</div>
+
+<div class='login'
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <p>
+          <%= label_tag :user_name %>
+          <br>
+           <%= text_field_tag :user_name, @user_name %>
+        </p>
+        <br>
+        <p>
+          <%= label_tag :password %>
+          <br>
+           <%= text_field_tag :password, @user_password %>
+        </p>
+        <br>
+        <p>
+          <%= submit_tag "Continue" %> or <%= submit_tag "Back" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+p>  
+  <a class='btn btn-success btn-sm'
+    href="/index">
+    Home &gt;&gt;
+  </a>
+
+</p>

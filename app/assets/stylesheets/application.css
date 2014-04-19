@@ -1,0 +1,143 @@
+.pic_cat {
+ background-image: url("/images/pic_catbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.alaska {
+ background-image: url("/images/alaskabg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.albq_balloon {
+ background-image: url("/images/albq_balloonbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.colorado {
+ background-image: url("/images/coloradobg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.wild_flowers {
+ background-image: url("/images/wild_flowersbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.fall_colors {
+ background-image: url("/images/fall_colorsbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.np_cat {
+ background-image: url("/images/national_parkbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.arches {
+ background-image: url("/images/archesbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.bryce_canyon {
+ background-image: url("/images/bryce_npbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.rocky_mountain {
+ background-image: url("/images/rocky_mtn_npbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.karrie10272007 {
+ background-image: url("/images/karrie_weddingbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.mowrer08172003 {
+ background-image: url("/images/mowrer1rubg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.top {
+  background-color: blue;
+  color: yellow;
+  padding: 20px 50px 20px 50px;
+}
+.top-logo {
+  font-size: 50pt;
+  font-family: cursive;
+  font-weight: bold;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.view_pictures {
+  padding: 60px 0 0 0;
+  background-color: yellow;*/
+}
+.picture {
+  padding: 0px 0px 0px 0px;
+}
+
+.top-views {
+ background-color: blue;
+  padding: 0px 0px 0px 250px;
+  color: yellow;
+  }
+.col-sm-3 {
+   padding: 0px 0px 0px 80px; 
+}
+         
+.login-title {
+  background-color: yellow;
+  padding: 40px 40px 40px 500px;
+}
+
+
+.so_login {
+  background-color: yellow;
+  padding: 40px 40px 40px 650px;
+}
+.footer {
+  background-color: #fdd;
+  padding: 40px 20px 40px 20px;
+}
+a {
+  color: red;
+}
+b {
+  color: blue;
+}
+h1 {
+   color: purple;
+   font-size:50;
+}
+h3 {
+  font-size: 19px;
+}
+h2 {
+  margin: 30px 0 30px 0;
+}
+
+ul {
+  color: red;
+  font-size: 30px;
+}
+.Picture_container {
+  width: 200px;
+  height: 300px;
+  border: 5px;
+}
+
+

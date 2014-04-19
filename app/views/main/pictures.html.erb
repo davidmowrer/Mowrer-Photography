@@ -1,0 +1,53 @@
+<div class= <%= @category %>>
+
+	<% if @error != nil %>
+	  <b>Error: <%= @error %></b>
+	<% end %>
+
+	<h1><%= @title %> </h1>
+
+	<h3><%= "Click picture title to enlarge" %></h3>
+
+	<% Picture.order(:category).each do |pic| %> 
+		<% @image1 = pic.image1 %>
+		<% @image2 = pic.image2 %>
+		<% @cat    = pic.category %>
+		<% @desc   = pic.description %>
+			
+		<% if @category != @cat %>
+			<% counter = counter + 1 %>
+		<% else %>	
+			<div class="col-sm-3">
+				<div class="Picture_container">
+				    <%= image_tag @image1, height: 185 %>,
+				    <br>
+				   <a href= "<%= image_path(@image2) %>">
+						<%= @desc %>"
+
+					</a>
+					<br>
+				</div>
+			</div>
+
+		<% end %>
+	
+	<% end %>
+
+	<% @category = "    " %>
+	<% @cat      = "    " %>
+
+	<p>	
+		<a class='btn btn-success btn-sm'
+			href="/pic_category">
+			Back &gt;&gt;
+		</a>
+
+		<a class='btn btn-success btn-sm'
+			href="/index">
+			Home &gt;&gt;
+		</a>
+
+	</p>
+
+</div>
+
