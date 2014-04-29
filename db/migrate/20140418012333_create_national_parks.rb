@@ -5,7 +5,6 @@ class CreateNationalParks < ActiveRecord::Migration
     	t.string  :image2
     	t.string  :name
     	t.string  :description
-    	t.integer :page
     end
   end
 end

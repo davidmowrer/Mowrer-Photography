@@ -5,46 +5,39 @@
 	<% end %>
 
 	<h1><%= @title %> </h1>
+	<h4><%= "Click picture title to enlarge" %></h4>
 
-	<h3><%= "Click picture title to enlarge" %></h3>
-
-	<% Picture.order(:category).each do |pic| %> 
-		<% @image1 = pic.image1 %>
-		<% @image2 = pic.image2 %>
-		<% @cat    = pic.category %>
-		<% @desc   = pic.description %>
+	<% @pictures.each do |pic| %> 
+		<% image1 = pic.image1 %>
+		<% image2 = pic.image2 %>
+		<% desc   = pic.description %>
 			
-		<% if @category != @cat %>
-			<% counter = counter + 1 %>
-		<% else %>	
-			<div class="col-sm-3">
-				<div class="Picture_container">
-				    <%= image_tag @image1, height: 185 %>,
-				    <br>
-				   <a href= "<%= image_path(@image2) %>">
-						<%= @desc %>"
-
-					</a>
-					<br>
-				</div>
+		<div class="col-sm-3">
+			<div class="Picture_container">
+			    <%= image_tag image1, height: 185 %>,
+			    <br>
+			   <a href= "<%= image_path(image2) %>">
+					<%= desc %>
+				</a>
+				<br>
 			</div>
-
-		<% end %>
+		</div>
 	
 	<% end %>
 
-	<% @category = "    " %>
-	<% @cat      = "    " %>
+	<div class="apple_pagination">
+	 <%= will_paginate @pictures %>
+	</div>
 
 	<p>	
 		<a class='btn btn-success btn-sm'
 			href="/pic_category">
-			Back &gt;&gt;
+			Back
 		</a>
 
 		<a class='btn btn-success btn-sm'
 			href="/index">
-			Home &gt;&gt;
+			Home
 		</a>
 
 	</p>

@@ -1,46 +1,54 @@
 <div class= "np_cat" 
 
+	<% if @error != nil %>
+	  <b>Error: <%= @error %></b>
+	<% end %>
 
-
-<% if @error != nil %>
-  <b>Error: <%= @error %></b>
-<% end %>
-
-<h1>Select a National Park</h1>
-<br>
-
-<ul>
-	<li>Arches National Park
-		<a class='btn btn-success btn-sm'
-		href="/arches_np">
-		Arches NP &gt;&gt;
-		</a></li>
 	<br>
-	<li>Bryce Canyon National Park
-		<a class='btn btn-success btn-sm'
-		href="/bryce_canyon_np">
-		Byrce Canyon NP &gt;&gt;
-		</a></li>	
-	<br>
-	<li>Rocky Mountain National Park
-		<a class='btn btn-success btn-sm'
-		href="/rocky_mtn_np">
-		Rocky Mtn NP &gt;&gt;
-		</a></li>
-</ul>
+	<ul>
+		<li>Arches National Park
+			<a class='btn btn-success btn-sm'
+			href="/arches_np">
+			Arches NP
+			</a></li>
+		<br>
+		<li>Bryce Canyon National Park
+			<a class='btn btn-success btn-sm'
+			href="/bryce_canyon_np">
+			Byrce Canyon NP
+			</a></li>	
+		<br>
+		<li>Grand Canyon National Park
+			<a class='btn btn-success btn-sm'
+			href="/grand_canyon_np">
+			Grand Canyon NP
+			</a></li>
+		<br>
+		<li>Everglades National Park
+			<a class='btn btn-success btn-sm'
+			href="/everglades_np">
+			Everglades NP
+			</a></li>
+		<br>					
+		<li>Rocky Mountain National Park
+			<a class='btn btn-success btn-sm'
+			href="/rocky_mtn_np">
+			Rocky Mtn NP
+			</a></li>
+	</ul>
 
-<br>
-<p>
-	<a class='btn btn-success btn-sm'
-		href="/pic_category">
-		Back &gt;&gt;
+	<br>
+	<p>
+		<a class='btn btn-success btn-sm'
+			href="/pic_category">
+			Back
+			</a>
+
+		<a class='btn btn-success btn-sm'
+				href="/index">
+				Home
 		</a>
-
-	<a class='btn btn-success btn-sm'
-			href="/index">
-			Home &gt;&gt;
-	</a>
-</p>
+	</p>
 
 
 </div>

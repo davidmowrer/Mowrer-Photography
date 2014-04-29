@@ -5,7 +5,6 @@ class CreatePictures < ActiveRecord::Migration
     	t.string :image2
     	t.string :category
     	t.string :description
-    	t.integer :page
     end
   end
 end

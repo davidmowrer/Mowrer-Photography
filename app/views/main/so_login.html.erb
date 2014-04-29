@@ -2,56 +2,46 @@
   <b>Error: <%= @error %></b>
 <% end %>
 
-
 <div class='login-title'
   <div class='container'>
     <div class='row'>
       <div class='col-sm-6'>
-        <h1>Login for Special Occassions</h1>
+        <h1>Login for Special Occasions</h1>
      </div>
     </div>
   </div>
 </div>
 
-<div class='login'
-  <div class='container'>
-    <div class='row'>
-      <div class='col-sm-6'>
-        <p>
-          <%= error_messages_for @viewer %>
-        </p>
-        <p>
-          <%= label_tag :first_name %>
-          <br>
-          <%= text_field_tag :first_name, @first_name %>
-        </p>
-        <p>
-          <%= label_tag :last_name %>
-          <br>
-          <%= text_field_tag :last_name, @last_name %>
-        </p>
-        <p>
-          <%= label_tag :event_code %>
-          <br>
-           <%= text_field_tag :event_code, @event_code %>
-        </p>
-        <br>
-        <p>
-          <%= submit_tag "Continue" %> or <%= submit_tag "Back" %>
-        </p>
-      </div>
-    </div>
+<%= form_tag so_login_path do %>
+  <div class="field">
+    <%= label_tag "first_name" %><br>
+    <%= text_field_tag "first_name", @first_name %>
   </div>
-</div>
+  <div class="field">
+    <%= label_tag "last_name" %><br>
+    <%= text_field_tag "last_name", @last_name %>
+  </div>
+  <div class="field">
+    <%= label_tag "event_code" %><br>
+    <%= text_field_tag "event_code", @event_code %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= submit_tag "Enter" %>
+  </div>
+<% end %>
 
 <p>
+  <br>
   <a class='btn btn-success btn-sm'
     href="/pic_category">
-    Back &gt;&gt;
+    Back
   </a>
 
   <a class='btn btn-success btn-sm'
       href="/index">
-      Home &gt;&gt;
+      Home
   </a>
 </p>
+
+

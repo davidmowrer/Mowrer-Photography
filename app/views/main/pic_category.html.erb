@@ -1,71 +1,76 @@
-<div class= "pic_cat" 
+<div class= <%= "pic_cat" %>>
 
+	<% if @error != nil %>
+	  <b>Error: <%= @error %></b>
+	<% end %>
 
- 
-<% if @error != nil %>
-  <b>Error: <%= @error %></b>
-<% end %>
-
-<h1>Select a picture category</h1>
-
-<br>
-
-<ul>
-	<li>Alaska Pictures
-		<a class='btn btn-success btn-sm'
-		href="/alaska">
-		Alaska &gt;&gt;
-		</a></li>
 	<br>
 
-	<li>Albuquerque Balloon
+	<ul>
+		<li>Alaska Pictures
+			<a class='btn btn-success btn-sm'
+			href="/alaska">
+			Alaska
+			</a></li>
+		<br>
+
+		<li>Albuquerque Balloon
+			<a class='btn btn-success btn-sm'
+			href="/albq_balloon">
+			Albuquerque Balloon
+			</a></li>
+		<br>
+
+		<li>Colorado Pictures
+			<a class='btn btn-success btn-sm'
+			href="/colorado">
+			Colorado
+			</a></li>
+		<br>
+
+		<li>Fall Colors
+			<a class='btn btn-success btn-sm'
+			href="/fall_colors">
+			Fall Colors
+			</a></li>
+		<br>
+
+		<li>Jacksonville Air Show
+			<a class='btn btn-success btn-sm'
+			href="/jax_air_show">
+			Jacksonville Air Show
+			</a></li>
+		<br>
+
+
+
+		<li>Wild Flowers
+			<a class='btn btn-success btn-sm'
+			href="/wild_flowers">
+			Wild Flowers
+			</a></li>
+		<br>
+
+		<li>National Parks
+			<a class='btn btn-success btn-sm'
+			href="/select_national_parks">
+			National Parks</a></li>
+		<br>
+
+		<li>Special Occasions
+			<a class='btn btn-success btn-sm'
+			href="/so_login">
+			Special Occasions
+			</a></li>
+		<br>
+
+	</ul>
+
+	<p>
 		<a class='btn btn-success btn-sm'
-		href="/albq_balloon">
-		Albuquerque Balloon &gt;&gt;
-		</a></li>
-	<br>
-
-	<li>Colorado Pictures
-		<a class='btn btn-success btn-sm'
-		href="/colorado">
-		Colorado &gt;&gt;
-		</a></li>
-	<br>
-
-	<li>Fall Colors
-		<a class='btn btn-success btn-sm'
-		href="/fall_colors">
-		Fall Colors &gt;&gt;
-		</a></li>
-	<br>
-
-	<li>Wild Flowers
-		<a class='btn btn-success btn-sm'
-		href="/wild_flowers">
-		Wild Flowers &gt;&gt;
-		</a></li>
-	<br>
-
-	<li>National Parks
-		<a class='btn btn-success btn-sm'
-		href="/select_national_parks">
-		National Parks</a></li>
-	<br>
-
-	<li>Special Occassions
-		<a class='btn btn-success btn-sm'
-		href="/so_login">
-		Special Occassions &gt;&gt;
-		</a></li>
-	<br>
-
-</ul>
-
-<p>
-	<a class='btn btn-success btn-sm'
-		href="/index">
-		Home &gt;&gt;
-		</a>
-</p>
+			href="/index">
+			Home
+			</a>
+	</p>
 
 </div>
