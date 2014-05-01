@@ -43,7 +43,7 @@ body
 }
 
 .np_cat {
- background-image: url("/images/national_parkbg.jpg"); 
+ background-image: url("/images/npbg.jpg"); 
  background-size: cover;
  font-family: sans-serif;
 }
@@ -100,7 +100,8 @@ body
 
 .view_pictures {
   padding: 60px 0 0 0;
-  background-color: yellow;
+  background-color: white;
+  color: white;
 }
 
 .picture {
@@ -109,8 +110,14 @@ body
 
 .top-views {
  background-color: blue;
-  padding: 0px 0px 0px 250px;
+  padding: 0px 0px 0px 0px;
   color: yellow;
+}
+
+.top-sites {
+ background-color: white;
+  padding: 0px 0px 0px 0px;
+  color: white;
 }
 
 .col-sm-3 {
@@ -122,38 +129,52 @@ body
   padding: 40px 40px 40px 500px;
 }
 
+.login-blog {
+  background-color: rgb(0,255,153);
+  padding: 40px 40px 40px 600px;
+}
+
+.blog-title {
+  background-color: yellow;
+  padding: 40px 40px 40px 600px;
+}
 .so_login {
   background-color: yellow;
   padding: 40px 40px 40px 650px;
 }
 
-.footer {
-  background-color: #fdd;
-  padding: 40px 20px 40px 20px;
+.so_login {
+  background-color: yellow;
+  padding: 40px 40px 40px 650px;
 }
 
-a {
+.buttons {
+  background-color: blue;
+  padding: 10px 20px 10px 20px;
+}
+
+.a {
   color: red;
 }
 
-b {
+.b {
   color: red;
 }
 
-h1 {
+.h1 {
    color: purple;
    font-size:50;
 }
 
-h3 {
+.h3 {
   font-size: 19px;
 }
 
-h2 {
+.h2 {
   margin: 30px 0 30px 0;
 }
 
-ul {
+.ul {
   color: red;
   font-size: 30px;
 }

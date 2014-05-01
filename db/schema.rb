@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418013120) do
+ActiveRecord::Schema.define(version: 20140430223028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,35 +21,47 @@ ActiveRecord::Schema.define(version: 20140418013120) do
     t.string "password"
   end
 
+  create_table "blog_posts", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "event_codes", force: true do |t|
     t.string  "event_code"
     t.integer "date"
   end
 
-  create_table "national_parks", force: true do |t|
-    t.string  "image1"
-    t.string  "image2"
-    t.string  "name"
-    t.string  "description"
-    t.integer "page"
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "occassions", force: true do |t|
-    t.string  "image1"
-    t.string  "image2"
-    t.string  "category"
-    t.string  "sub_category"
-    t.string  "name"
-    t.string  "description"
-    t.integer "page"
+  create_table "national_parks", force: true do |t|
+    t.string "image1"
+    t.string "image2"
+    t.string "name"
+    t.string "description"
+  end
+
+  create_table "occasions", force: true do |t|
+    t.string "image1"
+    t.string "image2"
+    t.string "category"
+    t.string "sub_category"
+    t.string "name"
+    t.string "description"
   end
 
   create_table "pictures", force: true do |t|
-    t.string  "image1"
-    t.string  "image2"
-    t.string  "category"
-    t.string  "description"
-    t.integer "page"
+    t.string "image1"
+    t.string "image2"
+    t.string "category"
+    t.string "description"
   end
 
   create_table "titles", force: true do |t|

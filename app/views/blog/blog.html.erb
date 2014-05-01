@@ -1,0 +1,21 @@
+<% if @error != nil %>
+  <b>Error: <%= @error %></b>
+<% end %>
+
+<% @blog_view.each do |post| %>
+  <div style='margin-bottom:10px'>
+    <div style='margin-left:130px;width:500px'>
+      <h3><%= post.location %></h3>
+        <%= post.first_name %> <%= post.last_name %>
+      <br>
+      <%= post.body %>
+     </div>
+  </div>
+
+  <br>
+  
+<% end %>
+
+<div class="apple_pagination">
+  <%= will_paginate @blog_view %>
+</div>  

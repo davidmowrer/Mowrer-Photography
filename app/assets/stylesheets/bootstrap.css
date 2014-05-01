@@ -303,7 +303,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #3200f8;
   background-color: #ffffff;
 }
 
@@ -324,7 +324,7 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #06fcad;
   text-decoration: none;
 }
 
@@ -2203,8 +2203,8 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #1b7491;
+  border-color: #000000;
 }
 
 .btn-success:hover,

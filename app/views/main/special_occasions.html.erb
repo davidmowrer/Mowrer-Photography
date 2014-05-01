@@ -1,0 +1,54 @@
+<div class= <%= @name %>>
+
+	<% if @error != nil %>
+	  <b>Error: <%= @error %></b>
+	<% end %>
+
+	<div class='top-views'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-sm-8'>
+				<%= @desc %>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h4><%= "Click picture title to enlarge" %></h4> 
+
+	<% @occasions.each do |pic|  %> 
+		<% image1 = pic.image1 %>
+		<% image2 = pic.image2 %>
+		<% desc   = pic.description %>
+
+		<div class="col-sm-3">
+			<div class="Picture_container">
+				<%= image_tag image1, height: 185 %>,
+				    <br>
+				<a href= "<%= image_path(image2) %>">
+					<%= desc %>
+				</a>
+				<br>
+			</div>
+		</div>
+
+	<% end %>
+		
+	<div class="apple_pagination">
+	  <%= will_paginate @occasions %>
+	</div>
+
+	<p>	
+		<a class='btn btn-success btn-sm'
+			href="/pic_category">
+			Back
+		</a>
+
+		<a class='btn btn-success btn-sm'
+			href="/index">
+			Home
+		</a>
+
+	</p>
+
+</div>

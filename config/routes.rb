@@ -25,10 +25,6 @@ App::Application.routes.draw do
   post "/admin_login"               => "main#admin_login_post"           ,as: "admin_login_post"
   get  "/blog_login"                => "blog#blog_login"                 ,as: "blog_login"
   post "/blog_login"                => "blog#blog_login_post"            ,as: "bog_login_post"
-  get  "/blog_logout"               => "blog#blog_logout"                ,as: "blog_logout"
-  get  "/blog_new"                  => "blog#new"                        ,as: "blog_new"
-  post "/blog_new"                  => "blog#blog_new_post"              ,as: "blog_new_post"
-  get  "/blog_edit/:id"             => "blog#blog_edit"                  ,as: "blog_edit"
-  post "/blog_edit/:id"             => "blog#blog_edit_post"             ,as: "blog_edit_post"            
+  get  "/blog"                      => "blog#blog"                       ,as: "blog"
 end
   
