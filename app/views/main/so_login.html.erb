@@ -12,36 +12,68 @@
   </div>
 </div>
 
-<%= form_tag so_login_path do %>
-  <div class="field">
-    <%= label_tag "first_name" %><br>
-    <%= text_field_tag "first_name", @first_name %>
+<div class='login-so'
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <%= form_tag so_login_path do %>
+          <div class="field">
+            <%= label_tag "first_name" %><br>
+            <%= text_field_tag "first_name", @first_name %>
+          </div>
+          <div class="field">
+            <%= label_tag "last_name" %><br>
+            <%= text_field_tag "last_name", @last_name %>
+          </div>
+          <div class="field">
+            <%= label_tag "event_code" %><br>
+            <%= text_field_tag "event_code", @event_code %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= submit_tag "Enter" %>
+          </div>
+        <% end %>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag "last_name" %><br>
-    <%= text_field_tag "last_name", @last_name %>
-  </div>
-  <div class="field">
-    <%= label_tag "event_code" %><br>
-    <%= text_field_tag "event_code", @event_code %>
-  </div>
-  <br>
-  <div class="actions">
-    <%= submit_tag "Enter" %>
-  </div>
-<% end %>
+</div>
 
-<p>
-  <br>
-  <a class='btn btn-success btn-sm'
-    href="/pic_category">
-    Back
-  </a>
+<div class='buttons'
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-6'>  
+        <a class='btn btn-success btn-sm'
+          href="/pic_category">
+          Back
+        </a>
 
-  <a class='btn btn-success btn-sm'
-      href="/index">
-      Home
-  </a>
-</p>
-
+        <a class='btn btn-success btn-sm'
+            href="/index">
+            Home
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 

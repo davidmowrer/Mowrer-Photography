@@ -4,9 +4,14 @@
 	  <b>Error: <%= @error %></b>
 	<% end %>
 
-	<h1><%= @title %> </h1>
-	<h4><%= "Click picture title to enlarge" %></h4>
+	<div class='picture-views'>
+		
+				<h1><%= @title %></h1>	
+				<h4><%= "Click picture title to enlarge" %></h4>
+	
+	</div>
 
+	<br>
 	<% @pictures.each do |pic| %> 
 		<% image1 = pic.image1 %>
 		<% image2 = pic.image2 %>
@@ -16,16 +21,15 @@
 			<div class="Picture_container">
 			    <%= image_tag image1, height: 185 %>,
 			    <br>
-			   <a href= "<%= image_path(image2) %>">
+			   <a href= "<%= lg_view_image_path(pic) %>">
 					<%= desc %>
 				</a>
-				<br>
 			</div>
 		</div>
 	
 	<% end %>
 
-	<div class="apple_pagination">
+	<div class="flickr_pagination">
 	 <%= will_paginate @pictures %>
 	</div>
 

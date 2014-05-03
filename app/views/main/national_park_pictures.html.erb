@@ -7,16 +7,17 @@
 	<% @desc = Title.find_by(name: @name) %>
 	<% @description = @desc.description %>
 
-	<div class='top-views'>
+	<div class='np-views'>
 		<div class='container'>
 			<div class='row'>
 				<div class='col-sm-8'>
 				<%= @description %>	
-				<h4><%= "**Click picture title to enlarge**" %></h4>
+				<h4><%= "Click picture title to enlarge" %></h4>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<br>
 	<% @national_parks.each do |pic| %> 
 	<% image1   = pic.image1 %> 
@@ -36,7 +37,7 @@
 
 	<% end %>
 
-	<div class="apple_pagination">
+	<div class="flickr_pagination">
 	  <%= will_paginate @national_parks %>
 	</div>	
 

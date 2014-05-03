@@ -1,4 +1,8 @@
-body
+body{
+  width: 1280px;
+  padding: 10px;
+
+}
 
 .pic_cat {
  background-image: url("/images/pic_catbg.jpg"); 
@@ -6,6 +10,13 @@ body
  font-family: sans-serif;
 }
 
+#photo {
+  width: 100%;
+}
+
+#photo img {
+  width: 100%;
+}
 .alaska {
  background-image: url("/images/alaskabg.jpg"); 
  background-size: cover;
@@ -32,6 +43,12 @@ body
 
 .jax_air_show {
  background-image: url("/images/jaxbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.swooping {
+ background-image: url("/images/swoopingbg.jpg"); 
  background-size: cover;
  font-family: sans-serif;
 }
@@ -84,6 +101,12 @@ body
  font-family: sans-serif;
 }
 
+.blog {
+ background-image: url("/images/blogbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .top {
   background-color: blue;
   color: yellow;
@@ -106,12 +129,43 @@ body
 
 .picture {
   padding: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.picture img {
+  width: 100%;
 }
 
 .top-views {
  background-color: blue;
   padding: 0px 0px 0px 0px;
   color: yellow;
+}
+
+.picture-views {
+ background-color: blue;
+  margin: 0px auto;
+  color: white;
+  text-align: center;
+}
+
+.np-views {
+ background-color: blue;
+  padding: 0px 0px 0px 300px;
+  color: white;
+}
+
+.occasion-views {
+ background-color: blue;
+  padding: 0px 0px 0px 300px;
+  color: white;
+}
+
+.blog-views {
+
+  width: 975px; 
+  height: 650px;   
+  padding: 20px 50px 20px 50px;
 }
 
 .top-sites {
@@ -126,7 +180,12 @@ body
          
 .login-title {
   background-color: yellow;
-  padding: 40px 40px 40px 500px;
+  padding: 40px 40px 40px 600px;
+}
+
+.login-so {
+  background-color: rgb(0,255,153);
+  padding: 40px 40px 40px 600px;
 }
 
 .login-blog {

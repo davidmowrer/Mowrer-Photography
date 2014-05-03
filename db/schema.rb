@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140430223028) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "location"
-    t.text     "body"
+    t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -13,38 +13,46 @@
 </div>
 
 <div class='login-blog'
-  <div class='container'>
-    <div class='row'>
-      <div class='col-sm-6'>
-        <%= form_tag blog_login_path do %>
-          <div class="field">
-            <%= label_tag "first_name" %><br>
-            <%= text_field_tag "first_name", @first_name %>
-          </div>
-          <div class="field">
-            <%= label_tag "last_name" %><br>
-            <%= text_field_tag "last_name", @last_name %>
-          </div>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-8'>
+          <%= form_tag blog_login_path do %>
+            <div class="field">
+              <%= label_tag "first_name" %><br>
+              <%= text_field_tag "first_name", @first_name %>
+            </div>
+            <div class="field">
+              <%= label_tag "last_name" %><br>
+              <%= text_field_tag "last_name", @last_name %>
+            </div>
+            <div class="field">
+              <%= label_tag "location" %><br>
+              <%= select_tag "location",
+                options_from_collection_for_select(@locations, 'id', 'name'),
+                prompt: "Choose a location:" %>
+            </div>  
+            <br>
+            <div class="field">
+              <%= text_area_tag :body, @body, rows: 10, cols: 50 %>
+            </div>
+            <div class="actions">
+              <%= submit_tag "Create" %>
+            </div>
+         <% end %>
           <br>
-          <div class="field">
-            <%=label_tag :location %>
-            <%= select_tag "location",
-              options_from_collection_for_select(
-              Location.order(:id), :id, :name, @locations),
-              prompt: "Choose a Location or Event" %>
-          </div>  
           <br>
-          <div class="field">
-            <%= text_area_tag :body, @body, rows: 18, cols: 80 %>
-          </div>
-          <div class="actions">
-            <%= submit_tag "Create" %>
-          </div>
-       </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+      </div>
     </div>
   </div>
 </div>
-<% end %>
 
 <div class='buttons'
   <div class='container'>

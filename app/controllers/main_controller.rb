@@ -20,45 +20,57 @@ class MainController <  ApplicationController
 		render :comment_blog and return
 	end
 
+	def lg_view_image
+		@lg_photo = Picture.find(params[:id])
+		render :lg_view_image and return
+	end
+
 	def alaska 
 		@title = "ALASKA"
 		@category = "alaska"
-		@pictures = Picture.where(category: "alaska").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "alaska").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
 	def albq_balloon
-		@title = "ALBUQUERQUE BALLOON FIESTA OCT 2005"
+		@title = "ALBUQUERQUE BALLOON FIESTA"
 		@category = "albq_balloon"
-		@pictures = Picture.where(category: "albq_balloon").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "albq_balloon").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
 	def colorado 
 		@title = "COLORADO"
 		@category = "colorado"
-		@pictures = Picture.where(category: "colorado").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "colorado").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
 	def fall_colors
 		@title = "FALL COLORS"
 		@category = "fall_colors"
-		@pictures = Picture.where(category: "fall_colors").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "fall_colors").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
 	def jax_air_show
-		@title = "JACKSONVILLE FL AIR SHOW at JAX NAVY AIR FIELD OCT 2008"
+		@title = "JACKSONVILLE FL AIR SHOW at JAX"
 		@category = "jax_air_show"
-		@pictures = Picture.where(category: "jax_air_show").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "jax_air_show").page(params[:page]).per_page(8)
+		render :pictures and return
+	end
+
+	def swooping
+		@title = "NATIONAL SWOOPING EVENT"
+		@category = "swooping"
+		@pictures = Picture.where(category: "swooping").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
 	def wild_flowers
 		@title = "WILD FLOWERS"
 		@category = "wild_flowers"
-		@pictures = Picture.where(category: "wild_flowers").page(params[:page]).per_page(12)
+		@pictures = Picture.where(category: "wild_flowers").page(params[:page]).per_page(8)
 		render :pictures and return
 	end
 
@@ -73,31 +85,31 @@ class MainController <  ApplicationController
 
 	def arches_np 
 		@name = "arches"
-		@national_parks = NationalPark.where(name: "arches").page(params[:page]).per_page(12)
+		@national_parks = NationalPark.where(name: "arches").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 
 	def bryce_canyon_np
 		@name = "bryce_canyon"
-		@national_parks = NationalPark.where(name: "bryce_canyon").page(params[:page]).per_page(12)
+		@national_parks = NationalPark.where(name: "bryce_canyon").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 
 	def everglades_np 
 		@name = "everglades"
-		@national_parks = NationalPark.where(name: "everglades").page(params[:page]).per_page(12)
+		@national_parks = NationalPark.where(name: "everglades").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 
 	def grand_canyon_np
 		@name = "grand_canyon" 
-		@national_parks = NationalPark.where(name: "grand_canyon").page(params[:page]).per_page(12)
+		@national_parks = NationalPark.where(name: "grand_canyon").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 
 	def rocky_mtn_np
 		@name = "rocky_mountain" 
-		@national_parks = NationalPark.where(name: "rocky_mountain").page(params[:page]).per_page(12)
+		@national_parks = NationalPark.where(name: "rocky_mountain").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 
@@ -106,11 +118,10 @@ class MainController <  ApplicationController
 	 end
 
 	def special_occasions
-
 	  id = session[:title_id]
 	  @desc = Title.find_by(id: id).description
 	  @name = Title.find_by(id: id).name
-      @occasions = Occasion.where(category: @name).page(params[:page]).per_page(12)
+      @occasions = Occasion.where(category: @name).page(params[:page]).per_page(8)
       render :special_occasions and return
 	end
 

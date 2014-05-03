@@ -1,21 +1,53 @@
-<% if @error != nil %>
-  <b>Error: <%= @error %></b>
-<% end %>
+<div class= <%= "blog" %>>
 
-<% @blog_view.each do |post| %>
-  <div style='margin-bottom:10px'>
-    <div style='margin-left:130px;width:500px'>
-      <h3><%= post.location %></h3>
-        <%= post.first_name %> <%= post.last_name %>
-      <br>
-      <%= post.body %>
-     </div>
+  <% if @error != nil %>
+    <b>Error: <%= @error %></b>
+  <% end %> 
+  <div class='occasion-views'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-8'>
+          <h2>This is what you said about my photographs</h2>
+          <h3>*******THANK YOU FOR YOUR COMMENTS*********</h3>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <br>
-  
-<% end %>
+  <div class ='blog-views'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <% @blog_view.each do |post| %>
+            <div style='margin-bottom:10px'>
+              <div style='margin-left:0px;width10px'>
+                <a> Name: </a>
+                <%= post.first_name %> <%= post.last_name %>
+                <br>
+                <a> Location: </a>
+                <%= loc = Location.find_by(id: post.location).name %>
+                <br>
+                <a> Comments: </a>
+                <%= post.body %>
+                <br>
+                <a> ___________________________________________________ </a>
+               </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="apple_pagination">
-  <%= will_paginate @blog_view %>
-</div>  
+  <div class="flickr_pagination">
+    <%= will_paginate @blog_view %>
+  </div>
+
+  <p>
+    <a class='btn btn-success btn-sm'
+      href="/index">
+      Back
+    </a>
+  </p>  
+
+</div>

@@ -4,7 +4,7 @@ class CreateBlogPosts < ActiveRecord::Migration
       t.string   :first_name
       t.string   :last_name
       t.string   :location
-      t.text     :body
+      t.string   :body
       t.timestamps :updated_at
     end
   end
