@@ -17,6 +17,7 @@ App::Application.routes.draw do
   get  "/everglades_np"             => "main#everglades_np"              ,as: "everglades_np"
   get  "/grand_canyon_np"           => "main#grand_canyon_np"            ,as: "grand_canyon_np"
   get  "/rocky_mtn_np"              => "main#rocky_mtn_np"               ,as: "rocky_mtn_np"
+  get  "/yellowstone_np"            => "main#yellowstone_np"             ,as: "yellowstone_np"
   get  "/index"                     => "main#index"                      ,as: "index"
   get  "/lg_view_image_pic/:id"     => "main#lg_view_image_pic"          ,as: "lg_view_image_pic"
   get  "/lg_view_image_np/:id"      => "main#lg_view_image_np"           ,as: "lg_view_image_np"

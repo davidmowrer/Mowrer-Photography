@@ -123,6 +123,12 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def yellowstone_np
+		@name = "yellowstone" 
+		@national_parks = NationalPark.where(name: "yellowstone").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def index
 	  	render :index
 	 end
