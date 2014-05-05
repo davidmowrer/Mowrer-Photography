@@ -8,33 +8,26 @@
 	<% @description = @desc.description %>
 
 	<div class='np-views'>
-		<div class='container'>
-			<div class='row'>
-				<div class='col-sm-8'>
-				<%= @description %>	
-				<h4><%= "Click picture title to enlarge" %></h4>
-				</div>
-			</div>
-		</div>
+		<%= @description %>	
+		<h4><%= "Click picture title to enlarge" %></h4>
 	</div>
 
 	<br>
 	<% @national_parks.each do |pic| %> 
 	<% image1   = pic.image1 %> 
 	<% image2   = pic.image2 %>
-	<% pic_desc = pic.description %>
+	<% desc     = pic.description %>
 
 		<div class="col-sm-3">
 		  	<div class="Picture_container">
 				<%= image_tag image1, height: 185 %>,
 				    <br>
-				    <a href= "<%= image_path(image2) %>">
-						<%= pic_desc %>
+				    <a href= "<%= lg_view_image_np_path(pic) %>">
+						<%= desc %>
 					</a>
 				<br>
 		  	</div>
 		</div>
-
 	<% end %>
 
 	<div class="flickr_pagination">
@@ -51,7 +44,6 @@
 			href="/index">
 			Home
 		</a>
-
 	</p>
 
 </div>

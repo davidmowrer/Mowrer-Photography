@@ -5,10 +5,8 @@
 	<% end %>
 
 	<div class='picture-views'>
-		
-				<h1><%= @title %></h1>	
-				<h4><%= "Click picture title to enlarge" %></h4>
-	
+		<h1><%= @title %></h1>	
+		<h4><%= "Click picture title to enlarge" %></h4>
 	</div>
 
 	<br>
@@ -21,12 +19,11 @@
 			<div class="Picture_container">
 			    <%= image_tag image1, height: 185 %>,
 			    <br>
-			   <a href= "<%= lg_view_image_path(pic) %>">
+			   <a href= "<%= lg_view_image_pic_path(pic) %>">
 					<%= desc %>
 				</a>
 			</div>
 		</div>
-	
 	<% end %>
 
 	<div class="flickr_pagination">
@@ -38,12 +35,10 @@
 			href="/pic_category">
 			Back
 		</a>
-
 		<a class='btn btn-success btn-sm'
 			href="/index">
 			Home
 		</a>
-
 	</p>
 
 </div>

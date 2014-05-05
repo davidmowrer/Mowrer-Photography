@@ -20,9 +20,19 @@ class MainController <  ApplicationController
 		render :comment_blog and return
 	end
 
-	def lg_view_image
-		@lg_photo = Picture.find(params[:id])
-		render :lg_view_image and return
+	def lg_view_image_so
+		@lg_photo_so = Occasion.find(params[:id])
+		render :lg_view_image_so and return
+	end
+
+	def lg_view_image_np
+		@lg_photo_np = NationalPark.find(params[:id])
+		render :lg_view_image_np and return
+	end
+
+	def lg_view_image_pic
+		@lg_photo_pic = Picture.find(params[:id])
+		render :lg_view_image_pic and return
 	end
 
 	def alaska 
@@ -130,25 +140,34 @@ class MainController <  ApplicationController
 	 end
 
 	def so_login
-		viewer = Viewer.new
-		@error = nil
+		@viewer = Viewer.new
+		@error  = nil
 	 	render :so_login and return
 	end
 
 	def so_login_post
+
 		id = params[:id]
 		viewer = Viewer.new
-	   	viewer.first_name = params["first_name"]
-		viewer.last_name  = params["last_name"]
-	 	viewer.event_code = params["event_code"]
+	   	viewer.first_name = params[:first_name]
+		viewer.last_name  = params[:last_name]
+	 	viewer.event_code = params[:event_code]
+	 	ev_code = EventCode.find_by(event_code: viewer.event_code)
 
-	 	ev_code = viewer.event_code
-	
-	    ec = EventCode.find_by(event_code: ev_code).event_code
+	 	if ev_code == nil
+	 		@error = "Invalid Event Code"
+			render :so_login and return
+	 	elsif viewer.first_name == ""
+			@error = "First Name is Blank"
+			render :so_login and return
+		elsif viewer.last_name == ""
+			@error = "Last Name is Blank"
+			render :so_login and return
+		else
+			ec = EventCode.find_by(event_code: viewer.event_code).event_code
+		end
 
-	  	# "if there is not a match you get an error unidentified method for nil:Nil class"
 	 	if params["commit"] == "Enter"
-
 	  		if viewer.event_code == "admin"
 	  			redirect_to "/admin_login" and return
 	  		else
@@ -161,7 +180,7 @@ class MainController <  ApplicationController
 
 		if ev_code = ec
 			if viewer.save == true
-	 			occ_id = Title.find_by(name: ev_code).id
+	 			occ_id = Title.find_by(name: viewer.event_code).id
 	 			session[:title_id] = occ_id
 				redirect_to "/special_occasions" and return
  			else
@@ -186,11 +205,10 @@ class MainController <  ApplicationController
 
 		if admin == nil	
 			@error = "Invalid username"
-			render :admin and return
-			
+			render :admin_login and return
 		elsif admin.password  != pw
 			@error = "Invalid password"
-			render :admin and return
+			render :admin_login and return
 		else
 			redirect_to "/admin" and return
 		end

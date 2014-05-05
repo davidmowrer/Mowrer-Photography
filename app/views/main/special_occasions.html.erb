@@ -5,15 +5,9 @@
 	<% end %>
 
 	<div class='occasion-views'>
-		<div class='container'>
-			<div class='row'>
-				<div class='col-sm-8'>
-				<%= @desc %>
-				<h4><%= "Click picture title to enlarge" %></h4> 	
-				</div>
-			</div>
-		</div>
-	</div>
+		<%= @desc %>
+		<h4><%= "Click picture title to enlarge" %></h4> 	
+    </div>
 
 	<br>
 	<% @occasions.each do |pic|  %> 
@@ -25,7 +19,7 @@
 			<div class="Picture_container">
 				<%= image_tag image1, height: 185 %>,
 				    <br>
-				<a href= "<%= image_path(image2) %>">
+				<a href= "<%= lg_view_image_so_path(pic) %>">
 					<%= desc %>
 				</a>
 				<br>
