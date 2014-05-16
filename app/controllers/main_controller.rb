@@ -63,6 +63,13 @@ class MainController <  ApplicationController
 		render :pictures and return
 	end
 
+	def florida
+		@title = "FLORIDA THE SUNSHINE STATE"
+		@category = "florida"
+		@pictures = Picture.where(category: "florida").page(params[:page]).per_page(8)
+		render :pictures and return
+	end
+
 	def jax_air_show
 		@title = "JACKSONVILLE FL AIR SHOW at JAX"
 		@category = "jax_air_show"
@@ -117,9 +124,21 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def mesa_verde_np
+		@name = "mesa_verde" 
+		@national_parks = NationalPark.where(name: "mesa_verde").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def rocky_mtn_np
 		@name = "rocky_mountain" 
 		@national_parks = NationalPark.where(name: "rocky_mountain").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
+	def valley_forge_np
+		@name = "valley_forge" 
+		@national_parks = NationalPark.where(name: "valley_forge").page(params[:page]).per_page(8)
 		render :national_park_pictures and return
 	end
 

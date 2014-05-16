@@ -40,6 +40,12 @@ body{
  font-family: sans-serif;
 }
 
+.florida {
+ background-image: url("/images/floridabg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .jax_air_show {
  background-image: url("/images/jaxbg.jpg"); 
  background-size: cover;
@@ -76,14 +82,32 @@ body{
  font-family: sans-serif;
 }
 
+.everglades {
+ background-image: url("/images/evergladesbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .grand_canyon {
  background-image: url("/images/grand_canyonbg.jpg"); 
  background-size: cover;
  font-family: sans-serif;
 }
 
+.mesa_verde {
+ background-image: url("/images/mesa_verdebg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .rocky_mountain {
  background-image: url("/images/rocky_mtn_npbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
+.valley_froge {
+ background-image: url("/images/valley_forgebg.jpg"); 
  background-size: cover;
  font-family: sans-serif;
 }
