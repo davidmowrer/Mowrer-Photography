@@ -112,6 +112,12 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def denali_np 
+		@name = "denali"
+		@national_parks = NationalPark.where(name: "denali").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def everglades_np 
 		@name = "everglades"
 		@national_parks = NationalPark.where(name: "everglades").page(params[:page]).per_page(8)

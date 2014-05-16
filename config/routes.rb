@@ -15,6 +15,7 @@ App::Application.routes.draw do
   get  "/select_national_parks"     => "main#select_national_parks"      ,as: "select_national_parks"
   get  "/arches_np"                 => "main#arches_np"                  ,as: "arches_np"
   get  "/bryce_canyon_np"           => "main#bryce_canyon_np"            ,as: "bryce_canyon_np"
+  get  "/denali_np"                 => "main#denali_np"                  ,as: "denali_np"
   get  "/everglades_np"             => "main#everglades_np"              ,as: "everglades_np"
   get  "/grand_canyon_np"           => "main#grand_canyon_np"            ,as: "grand_canyon_np"
   get  "/mesa_verde_np"             => "main#mesa_verde_np"              ,as: "mesa_verde_np"
