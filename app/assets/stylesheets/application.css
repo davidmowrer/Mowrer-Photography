@@ -82,6 +82,12 @@ body{
  font-family: sans-serif;
 }
 
+.denali {
+ background-image: url("/images/denalibg.jpg");
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .everglades {
  background-image: url("/images/evergladesbg.jpg"); 
  background-size: cover;
