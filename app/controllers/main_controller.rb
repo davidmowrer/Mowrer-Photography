@@ -106,6 +106,12 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def bent_fort_np 
+		@name = "bent_fort"
+		@national_parks = NationalPark.where(name: "bent_fort").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def bryce_canyon_np
 		@name = "bryce_canyon"
 		@national_parks = NationalPark.where(name: "bryce_canyon").page(params[:page]).per_page(8)

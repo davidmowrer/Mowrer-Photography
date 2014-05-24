@@ -76,6 +76,12 @@ body{
  font-family: sans-serif;
 }
 
+.bent_fort {
+ background-image: url("/images/bent_fortbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .bryce_canyon {
  background-image: url("/images/bryce_npbg.jpg"); 
  background-size: cover;

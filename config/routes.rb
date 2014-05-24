@@ -14,6 +14,7 @@ App::Application.routes.draw do
   get  "/wild_flowers"              => "main#wild_flowers"               ,as: "wild_flowers"
   get  "/select_national_parks"     => "main#select_national_parks"      ,as: "select_national_parks"
   get  "/arches_np"                 => "main#arches_np"                  ,as: "arches_np"
+  get  "/bent_fort_np"              => "main#bent_fort_np"               ,as: "bent_fort_np"
   get  "/bryce_canyon_np"           => "main#bryce_canyon_np"            ,as: "bryce_canyon_np"
   get  "/denali_np"                 => "main#denali_np"                  ,as: "denali_np"
   get  "/everglades_np"             => "main#everglades_np"              ,as: "everglades_np"
