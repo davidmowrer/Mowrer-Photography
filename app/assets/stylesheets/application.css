@@ -112,6 +112,11 @@ body{
  font-family: sans-serif;
 }
 
+.muir_woods {
+ background-image: url("/images/redwoodsbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
 .rocky_mountain {
  background-image: url("/images/rocky_mtn_npbg.jpg"); 
  background-size: cover;

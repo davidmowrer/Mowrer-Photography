@@ -20,6 +20,7 @@ App::Application.routes.draw do
   get  "/everglades_np"             => "main#everglades_np"              ,as: "everglades_np"
   get  "/grand_canyon_np"           => "main#grand_canyon_np"            ,as: "grand_canyon_np"
   get  "/mesa_verde_np"             => "main#mesa_verde_np"              ,as: "mesa_verde_np"
+  get  "/muir_woods_np"             => "main#muir_woods_np"              ,as: "muir_woods_np"
   get  "/rocky_mtn_np"              => "main#rocky_mtn_np"               ,as: "rocky_mtn_np"
   get  "/valley_forge_np"           => "main#valley_forge_np"            ,as: "valley_forge_np"
   get  "/yellowstone_np"            => "main#yellowstone_np"             ,as: "yellowstone_np"
