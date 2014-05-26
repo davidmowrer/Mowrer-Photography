@@ -141,6 +141,12 @@ body{
  font-family: sans-serif;
 }
 
+.zion {
+ background-image: url("/images/zionbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .dava08122000 {
  background-image: url("/images/dava_weddingbg.jpg"); 
  background-size: cover;

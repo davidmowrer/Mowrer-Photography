@@ -25,6 +25,7 @@ App::Application.routes.draw do
   get  "/rocky_mtn_np"              => "main#rocky_mtn_np"               ,as: "rocky_mtn_np"
   get  "/valley_forge_np"           => "main#valley_forge_np"            ,as: "valley_forge_np"
   get  "/yellowstone_np"            => "main#yellowstone_np"             ,as: "yellowstone_np"
+  get  "/zion_np"                   => "main#zion_np"                    ,as: "zion_np"
   get  "/index"                     => "main#index"                      ,as: "index"
   get  "/lg_view_image_pic/:id"     => "main#lg_view_image_pic"          ,as: "lg_view_image_pic"
   get  "/lg_view_image_np/:id"      => "main#lg_view_image_np"           ,as: "lg_view_image_np"
