@@ -5,6 +5,7 @@ App::Application.routes.draw do
   get  "/contact"                   => "main#contact"                    ,as: "contact"
   get  "/alaska"                    => "main#alaska"                     ,as: "alaska"
   get  "/albq_balloon"              => "main#albq_balloon"               ,as: "albq_balloon"
+  get  "/broncos"                   => "main#broncos"                    ,as: "broncos"
   get  "/colorado"                  => "main#colorado"                   ,as: "colorado"
   get  "/fall_colors"               => "main#fall_colors"                ,as: "fall_colors"
   get  "/florida"                   => "main#florida"                    ,as: "florida"

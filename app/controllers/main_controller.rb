@@ -49,6 +49,13 @@ class MainController <  ApplicationController
 		render :pictures and return
 	end
 
+	def broncos 
+		@title = "JOHN ELWAY HOF & BRONCOS SUPER BOWL XXXIII PARADE"
+		@category = "broncos"
+		@pictures = Picture.where(category: "broncos").page(params[:page]).per_page(8)
+		render :pictures and return
+	end
+
 	def colorado 
 		@title = "COLORADO"
 		@category = "colorado"

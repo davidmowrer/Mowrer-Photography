@@ -28,6 +28,12 @@ body{
  font-family: sans-serif;
 }
 
+.broncos {
+ background-image: url("/images/broncosbg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .colorado {
  background-image: url("/images/coloradobg.jpg"); 
  background-size: cover;
