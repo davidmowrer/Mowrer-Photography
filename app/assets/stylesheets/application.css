@@ -112,6 +112,12 @@ body{
  font-family: sans-serif;
 }
 
+.kenai_fjords {
+ background-image: url("/images/kenaibg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .mesa_verde {
  background-image: url("/images/mesa_verdebg.jpg"); 
  background-size: cover;

@@ -143,6 +143,12 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def kenai_fjords_np
+		@name = "kenai_fjords" 
+		@national_parks = NationalPark.where(name: "kenai_fjords").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def mesa_verde_np
 		@name = "mesa_verde" 
 		@national_parks = NationalPark.where(name: "mesa_verde").page(params[:page]).per_page(8)
