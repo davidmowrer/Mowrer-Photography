@@ -167,6 +167,12 @@ class MainController <  ApplicationController
 		render :national_park_pictures and return
 	end
 
+	def saguaro_np
+		@name = "saguaro" 
+		@national_parks = NationalPark.where(name: "saguaro").page(params[:page]).per_page(8)
+		render :national_park_pictures and return
+	end
+
 	def valley_forge_np
 		@name = "valley_forge" 
 		@national_parks = NationalPark.where(name: "valley_forge").page(params[:page]).per_page(8)
