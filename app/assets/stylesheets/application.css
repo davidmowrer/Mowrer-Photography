@@ -58,6 +58,12 @@ body{
  font-family: sans-serif;
 }
 
+.sedona {
+ background-image: url("/images/sedonabg.jpg"); 
+ background-size: cover;
+ font-family: sans-serif;
+}
+
 .swooping {
  background-image: url("/images/swoopingbg.jpg"); 
  background-size: cover;

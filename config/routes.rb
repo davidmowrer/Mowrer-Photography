@@ -10,6 +10,7 @@ App::Application.routes.draw do
   get  "/fall_colors"               => "main#fall_colors"                ,as: "fall_colors"
   get  "/florida"                   => "main#florida"                    ,as: "florida"
   get  "/jax_air_show"              => "main#jax_air_show"               ,as: "jax_air_show"
+  get  "/sedona"                    => "main#sedona"                     ,as: "sedona"
   get  "/swooping"                  => "main#swooping"                   ,as: "swooping"
   get  "/test_pictures"             => "main#test_pictures"              ,as: "test_pictures"
   get  "/wild_flowers"              => "main#wild_flowers"               ,as: "wild_flowers"

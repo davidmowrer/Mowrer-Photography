@@ -84,6 +84,13 @@ class MainController <  ApplicationController
 		render :pictures and return
 	end
 
+	def sedona
+		@title = "SEDONA ARIZONA"
+		@category = "sedona"
+		@pictures = Picture.where(category: "sedona").page(params[:page]).per_page(8)
+		render :pictures and return
+	end
+
 	def swooping
 		@title = "NATIONAL SWOOPING EVENT"
 		@category = "swooping"
